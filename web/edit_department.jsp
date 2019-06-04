@@ -6,25 +6,45 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<jsp:useBean id="edit" class="com.connect_database"></jsp:useBean>
+<jsp:useBean id="edit" class="com.connect_database"/>
 <html>
 <head>
-    <title>正在保存......</title>
+    <title>.........</title>
 </head>
 <body>
     <%
-        String name=request.getParameter("name");
-        String number=request.getParameter("number");
-        String add_name=request.getParameter("add_name");
-        String add_number=request.getParameter("add_number");
-        String sql="insert into department values("+add_number+",'"+add_name+"');";
-        String sql2="update department set name = '"+name+"' where number="+number+";";
         try {
-            edit.setUsername((String)session.getAttribute("username"));
-            edit.setPassword((String)session.getAttribute("password"));
+            edit.setUsername((String) session.getAttribute("username"));
+            edit.setPassword((String) session.getAttribute("password"));
             edit.connect();
-            edit.executeUpdate(sql);
-            edit.executeUpdate(sql2);
+            int count = (int) session.getAttribute("count");
+            session.removeAttribute("count");
+            for (int i = 0; i <= count; i++) {  //更新数据
+                String name = request.getParameter(i + "name");
+                String number = request.getParameter(i + "number");
+                String sql = "update department set name = '" + name + "' where number=" + number + ";";
+                edit.executeUpdate(sql);
+            }
+            String delete;
+            String[] deleteString=request.getParameterValues("checkbox");
+            if (deleteString!=null) {   //删除数据
+                if (deleteString.length > 0) {
+                    delete = deleteString[0];
+                    for (int i = 0; i < deleteString.length; i++) {
+                        delete = deleteString[i];
+                        if (delete != null) {
+                            String sql = "delete from department where name='" + delete + "';";
+                            edit.executeUpdate(sql);
+                        }
+                    }
+                }
+            }
+            String add_name=request.getParameter("add_name");   //添加数据
+            String add_number=request.getParameter("add_number");
+            if ((!add_name.equals("")) && (!add_number.equals(""))) {
+                String sql = "insert into department values(" + add_number + ",'" + add_name + "');";
+                edit.executeUpdate(sql);
+            }
             edit.disconnect();
             response.setCharacterEncoding("utf-8");
             PrintWriter output = response.getWriter();
@@ -35,7 +55,6 @@
         }catch (Exception e){
             e.printStackTrace();
         }
-
     %>
 </body>
 </html>

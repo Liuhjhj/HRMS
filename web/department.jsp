@@ -141,20 +141,23 @@
                                                     department.connect();
                                                     String sql="select * from department;";
                                                     ResultSet resultSet = department.executeQuery(sql);
+                                                    int count = 0;
                                                     while (resultSet.next()){
-                                                        session.setAttribute("number",resultSet.getInt("number"));
-                                                        session.setAttribute("name",resultSet.getString("name"));
                                             %>
                                             <tr>
-                                                <td><input type="checkbox"></td>
-                                                <td><input type="text" readonly="readonly" class="form-control" name="<%=session.getAttribute("number")%>" value="<%=application.getAttribute("number")%>"></td>
-                                                <td><input type="text" class="form-control" name="<%=session.getAttribute("name")%>" value="<%=application.getAttribute("name")%>"></td>
+                                                <td><input type="checkbox" name="checkbox" value="<%=resultSet.getString("name")%>"></td>
+                                                <td><input type="text" readonly="readonly" class="form-control" name="<%=count + "number"%>" value="<%=resultSet.getInt("number")%>"></td>
+                                                <td><input type="text" class="form-control" name="<%=count + "name"%>" value="<%=resultSet.getString("name")%>"></td>
                                             </tr>
                                             <%
+                                                        count++;
                                                     }
+                                                    session.setAttribute("count",count);
+                                                    department.disconnect();
                                                 }catch (Exception e){
                                                     e.printStackTrace();
                                                 }
+
                                             %>
                                         </tbody>
                                     </table>
