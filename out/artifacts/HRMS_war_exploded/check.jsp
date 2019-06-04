@@ -22,7 +22,7 @@
             session.setAttribute("username",username);
             session.setAttribute("password",password);
             check.disconnect();
-            response.sendRedirect("home.jsp");
+            response.sendRedirect("department.jsp");
         }else {
             response.setCharacterEncoding("utf-8");
             PrintWriter output = response.getWriter();
