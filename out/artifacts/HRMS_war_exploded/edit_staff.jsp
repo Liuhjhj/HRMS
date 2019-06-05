@@ -13,7 +13,7 @@
 </head>
 <body>
 <%
-
+    request.setCharacterEncoding("UTF-8");
     edit.setUsername((String) session.getAttribute("username"));
     edit.setPassword((String) session.getAttribute("password"));
     edit.connect();
@@ -44,12 +44,16 @@
             String age = request.getParameter(i + "age");
             String sex = request.getParameter(i + "sex");
             String department = request.getParameter(i + "department");
-            String sql = "update staff set name = '" + name + "' " +
-                    "and age = " + age +
-                    "and sex = '" + sex + "' " +
-                    "and department = '" + department +
-                    "' where number=" + number + ";";
-            edit.executeUpdate(sql);
+            if ((!name.equals("")) && (!number.equals(""))  //有try-catch块,这行if可要可不要
+                    && (!age.equals("")) && (!sex.equals(""))   //(不要的话可能会报SQL错误)
+                    && (!department.equals(""))) {
+                String sql = "update staff set name = '" + name + "' " +
+                        "and age = " + age +
+                        "and sex = '" + sex + "' " +
+                        "and department = '" + department +
+                        "' where number=" + number + ";";
+                edit.executeUpdate(sql);
+            }
         }
     }catch (Exception e) {
         e.printStackTrace();
@@ -64,7 +68,7 @@
                 && (!add_age.equals("")) && (!add_sex.equals(""))   //(不要的话可能会报SQL错误)
                 && (!add_department.equals(""))) {
             String sql = "insert into staff values(" + add_number + ",'" + add_name +
-                    "'"+ add_age + ",'" + add_sex + "','" + add_department + "');";
+                    "',"+ add_age + ",'" + add_sex + "','" + add_department + "');";
             edit.executeUpdate(sql);
         }
     }catch (Exception e){
@@ -74,7 +78,7 @@
     response.setCharacterEncoding("utf-8"); //弹出窗口
     PrintWriter output = response.getWriter();
     output.print("<script>alert('保存完成'); " +
-            "window.location='department.jsp' </script>");
+            "window.location='staff.jsp' </script>");
     output.flush();
     output.close();
 %>
