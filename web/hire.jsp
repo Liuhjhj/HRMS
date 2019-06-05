@@ -128,7 +128,8 @@
                                     <table class="table mb-0">
                                         <thead class="bg-light">
                                         <tr>
-                                            <th scope="col" class="border-0">是否删除</th>
+                                            <th scope="col" class="border-0">录用</th>
+                                            <th scope="col" class="border-0">删除</th>
                                             <th scope="col" class="border-0">编号</th>
                                             <th scope="col" class="border-0">姓名</th>
                                             <th scope="col" class="border-0">年龄</th>
@@ -151,8 +152,12 @@
                                         %>
                                         <tr>
                                             <td><div class="custom-control custom-checkbox mb-1">
-                                                <input type="checkbox" id="<%=count+"checkbox"%>" class="custom-control-input" name="checkbox" value="<%=resultSet.getString("name")%>">
-                                                <label class="custom-control-label" for="<%=count+"checkbox"%>"><%=resultSet.getString("name")%></label>
+                                                <input type="checkbox" id="<%=count+"checkbox_hire"%>" class="custom-control-input" name="checkbox" value="<%=resultSet.getString("name")%>">
+                                                <label class="custom-control-label" for="<%=count+"checkbox_hire"%>"><%=resultSet.getString("name")%></label>
+                                            </div></td>
+                                            <td><div class="custom-control custom-checkbox mb-1">
+                                                <input type="checkbox" id="<%=count+"checkbox_delete"%>" class="custom-control-input" name="checkbox" value="<%=resultSet.getString("name")%>">
+                                                <label class="custom-control-label" for="<%=count+"checkbox_delete"%>"><%=resultSet.getString("name")%></label>
                                             </div></td>
                                             <td><input type="text" readonly="readonly" class="form-control" name="<%=count + "number"%>" value="<%=resultSet.getInt("number")%>"></td>
                                             <td><input type="text" class="form-control" name="<%=count + "name"%>" value="<%=resultSet.getString("name")%>"></td>
@@ -170,7 +175,6 @@
                                             }catch (Exception e){
                                                 e.printStackTrace();
                                             }
-
                                         %>
                                         </tbody>
                                     </table>
@@ -218,7 +222,6 @@
                     <!-- End Default Dark Table -->
                     <div class="col text-center view-report">
                         <button type="submit" class="btn btn-accent" >保存更改</button>
-                        <button type="button" class="btn btn-accent" >录用</button>
                     </div>
                 </div>
             </form>
