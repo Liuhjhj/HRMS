@@ -122,7 +122,7 @@
                         <div class="col">
                             <div class="card card-small mb-4">
                                 <div class="card-header border-bottom">
-                                    <h6 class="m-0">修改信息</h6>
+                                    <h6 class="m-0">修改</h6>
                                 </div>
                                 <div class="card-body p-0 pb-3 text-center">
                                     <table class="table mb-0">
@@ -144,7 +144,7 @@
                                                 department.setUsername((String) session.getAttribute("username"));
                                                 department.setPassword((String) session.getAttribute("password"));
                                                 department.connect();
-                                                String sql="select * from staff;";
+                                                String sql="select * from hire;";
                                                 ResultSet resultSet = department.executeQuery(sql);
                                                 int count = 0;
                                                 while (resultSet.next()){
