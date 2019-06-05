@@ -13,21 +13,10 @@
 </head>
 <body>
     <%
-        try {
-            edit.setUsername((String) session.getAttribute("username"));
-            edit.setPassword((String) session.getAttribute("password"));
-            edit.connect();
-            int count = (int) session.getAttribute("count");
-            session.removeAttribute("count");
-            for (int i = 0; i <= count; i++) {  //更新数据
-                String name = request.getParameter(i + "name");
-                String number = request.getParameter(i + "number");
-                String sql = "update department set name = '" + name + "' where number=" + number + ";";
-                edit.executeUpdate(sql);
-            }
-        }catch (Exception e) {
-            e.printStackTrace();
-        }
+        request.setCharacterEncoding("UTF-8");
+        edit.setUsername((String) session.getAttribute("username"));
+        edit.setPassword((String) session.getAttribute("password"));
+        edit.connect();
         try {
             String delete;
             String[] deleteString = request.getParameterValues("checkbox");
@@ -47,6 +36,18 @@
             e.printStackTrace();
         }
         try {
+            int count = (int) session.getAttribute("count");
+            session.removeAttribute("count");
+            for (int i = 0; i <= count; i++) {  //更新数据
+                String name = request.getParameter(i + "name");
+                String number = request.getParameter(i + "number");
+                String sql = "update department set name = '" + name + "' where number=" + number + ";";
+                edit.executeUpdate(sql);
+            }
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
             String add_name=request.getParameter("add_name");   //添加数据
             String add_number=request.getParameter("add_number");
             if ((!add_name.equals("")) && (!add_number.equals(""))) {
@@ -57,12 +58,12 @@
         }catch (Exception e){
             e.printStackTrace();
         }
-            response.setCharacterEncoding("utf-8");
-            PrintWriter output = response.getWriter();
-            output.print("<script>alert('保存完成'); " +
-                    "window.location='department.jsp' </script>");
-            output.flush();
-            output.close();
+        response.setCharacterEncoding("utf-8");
+        PrintWriter output = response.getWriter();
+        output.print("<script>alert('保存完成'); " +
+                "window.location='department.jsp' </script>");
+        output.flush();
+        output.close();
     %>
 </body>
 </html>

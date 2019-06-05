@@ -48,9 +48,9 @@
                     && (!age.equals("")) && (!sex.equals(""))   //(不要的话可能会报SQL错误)
                     && (!department.equals(""))) {
                 String sql = "update staff set name = '" + name + "' " +
-                        "and age = " + age +
-                        "and sex = '" + sex + "' " +
-                        "and department = '" + department +
+                        ", age = " + age + " "+
+                        ", sex = '" + sex + "' " +
+                        ", department = '" + department +
                         "' where number=" + number + ";";
                 edit.executeUpdate(sql);
             }
@@ -84,3 +84,35 @@
 %>
 </body>
 </html>
+<!--一个未知的空指针错误
+java.lang.NullPointerException
+at org.apache.jsp.edit_005fstaff_jsp._jspService(edit_005fstaff_jsp.java:164)
+at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:476)
+at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:385)
+at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:329)
+at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:836)
+at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1839)
+at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+at java.base/java.lang.Thread.run(Thread.java:834)
+-->

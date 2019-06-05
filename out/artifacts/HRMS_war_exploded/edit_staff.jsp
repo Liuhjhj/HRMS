@@ -47,10 +47,11 @@
             if ((!name.equals("")) && (!number.equals(""))  //有try-catch块,这行if可要可不要
                     && (!age.equals("")) && (!sex.equals(""))   //(不要的话可能会报SQL错误)
                     && (!department.equals(""))) {
-                String sql = "update staff set name = '" + name + "' " +
-                        "and age = " + age +
-                        "and sex = '" + sex + "' " +
-                        "and department = '" + department +
+                String sql="";
+                sql = "update staff set name = '" + name + "' " +
+                        ", age = " + age + " "+
+                        ", sex = '" + sex + "' " +
+                        ", department = '" + department +
                         "' where number=" + number + ";";
                 edit.executeUpdate(sql);
             }
