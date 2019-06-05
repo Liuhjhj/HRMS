@@ -48,13 +48,13 @@
             <div class="nav-wrapper">
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link active" href="department.jsp">
+                        <a class="nav-link active" href="index.html">
                             <i class="material-icons">edit</i>
                             <span>部门管理</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="staff.jsp">
+                        <a class="nav-link " href="components-blog-posts.html">
                             <i class="material-icons">vertical_split</i>
                             <span>员工管理</span>
                         </a>
@@ -107,9 +107,9 @@
         <!-- End Main Sidebar -->
         <main class="main-content col-lg-10 col-md-9 col-sm-12 p-0 offset-lg-2 offset-md-3">
             <form method="post" action="edit_department.jsp">
-            <!-- / .main-navbar -->
+                <!-- / .main-navbar -->
                 <div class="main-content-container container-fluid px-4">
-                <!-- Page Header -->
+                    <!-- Page Header -->
                     <div class="page-header row no-gutters py-4">
                         <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
                             <span class="text-uppercase page-subtitle">Overview</span>
@@ -134,31 +134,31 @@
                                         </tr>
                                         </thead>
                                         <tbody>
-                                            <%
-                                                try {
-                                                    department.setUsername((String) session.getAttribute("username"));
-                                                    department.setPassword((String) session.getAttribute("password"));
-                                                    department.connect();
-                                                    String sql="select * from department;";
-                                                    ResultSet resultSet = department.executeQuery(sql);
-                                                    int count = 0;
-                                                    while (resultSet.next()){
-                                            %>
-                                            <tr>
-                                                <td><input type="checkbox" class="custom-checkbox" name="checkbox" value="<%=resultSet.getString("name")%>" checked=""></td>
-                                                <td><input type="text" readonly="readonly" class="form-control" name="<%=count + "number"%>" value="<%=resultSet.getInt("number")%>"></td>
-                                                <td><input type="text" class="form-control" name="<%=count + "name"%>" value="<%=resultSet.getString("name")%>"></td>
-                                            </tr>
-                                            <%
-                                                        count++;
-                                                    }
-                                                    session.setAttribute("count",count);
-                                                    department.disconnect();
-                                                }catch (Exception e){
-                                                    e.printStackTrace();
+                                        <%
+                                            try {
+                                                department.setUsername((String) session.getAttribute("username"));
+                                                department.setPassword((String) session.getAttribute("password"));
+                                                department.connect();
+                                                String sql="select * from department;";
+                                                ResultSet resultSet = department.executeQuery(sql);
+                                                int count = 0;
+                                                while (resultSet.next()){
+                                        %>
+                                        <tr>
+                                            <td><input type="checkbox" name="checkbox" value="<%=resultSet.getString("name")%>"></td>
+                                            <td><input type="text" readonly="readonly" class="form-control" name="<%=count + "number"%>" value="<%=resultSet.getInt("number")%>"></td>
+                                            <td><input type="text" class="form-control" name="<%=count + "name"%>" value="<%=resultSet.getString("name")%>"></td>
+                                        </tr>
+                                        <%
+                                                    count++;
                                                 }
+                                                session.setAttribute("count",count);
+                                                department.disconnect();
+                                            }catch (Exception e){
+                                                e.printStackTrace();
+                                            }
 
-                                            %>
+                                        %>
                                         </tbody>
                                     </table>
                                 </div>
