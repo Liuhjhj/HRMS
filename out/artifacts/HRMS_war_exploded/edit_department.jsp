@@ -41,8 +41,7 @@
             for (int i = 0; i <= count; i++) {  //更新数据
                 String name = request.getParameter(i + "name");
                 String number = request.getParameter(i + "number");
-                String sql="";
-                sql = "update department set name = '" + name + "' where number=" + number + ";";
+                String sql = "update department set name = '" + name + "' where number=" + number + ";";
                 edit.executeUpdate(sql);
             }
         }catch (Exception e) {
@@ -59,12 +58,12 @@
         }catch (Exception e){
             e.printStackTrace();
         }
-            response.setCharacterEncoding("utf-8");
-            PrintWriter output = response.getWriter();
-            output.print("<script>alert('保存完成'); " +
-                    "window.location='department.jsp' </script>");
-            output.flush();
-            output.close();
+        response.setCharacterEncoding("utf-8");
+        PrintWriter output = response.getWriter();
+        output.print("<script>alert('保存完成'); " +
+                "window.location='department.jsp' </script>");
+        output.flush();
+        output.close();
     %>
 </body>
 </html>

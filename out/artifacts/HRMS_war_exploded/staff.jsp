@@ -60,7 +60,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="add-new-post.html">
+                        <a class="nav-link " href="hire.jsp">
                             <i class="material-icons">note_add</i>
                             <span>招聘管理</span>
                         </a>
@@ -96,7 +96,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="index.jsp">
+                        <a class="nav-link " href="exit.jsp">
                             <i class="material-icons">error</i>
                             <span>安全退出</span>
                         </a>

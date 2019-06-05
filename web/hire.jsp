@@ -48,7 +48,7 @@
             <div class="nav-wrapper">
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link active" href="department.jsp">
+                        <a class="nav-link " href="department.jsp">
                             <i class="material-icons">edit</i>
                             <span>部门管理</span>
                         </a>
@@ -60,7 +60,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="hire.jsp">
+                        <a class="nav-link active" href="hire.jsp">
                             <i class="material-icons">note_add</i>
                             <span>招聘管理</span>
                         </a>
@@ -106,14 +106,14 @@
         </aside>
         <!-- End Main Sidebar -->
         <main class="main-content col-lg-10 col-md-9 col-sm-12 p-0 offset-lg-2 offset-md-3">
-            <form method="post" action="edit_department.jsp">
-            <!-- / .main-navbar -->
+            <form method="post" action="edit_staff.jsp">
+                <!-- / .main-navbar -->
                 <div class="main-content-container container-fluid px-4">
-                <!-- Page Header -->
+                    <!-- Page Header -->
                     <div class="page-header row no-gutters py-4">
                         <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
                             <span class="text-uppercase page-subtitle">Overview</span>
-                            <h3 class="page-title">部门数据表</h3>
+                            <h3 class="page-title">招聘数据表</h3>
                         </div>
                     </div>
                     <!-- End Page Header -->
@@ -122,46 +122,56 @@
                         <div class="col">
                             <div class="card card-small mb-4">
                                 <div class="card-header border-bottom">
-                                    <h6 class="m-0">修改部门</h6>
+                                    <h6 class="m-0">修改信息</h6>
                                 </div>
                                 <div class="card-body p-0 pb-3 text-center">
                                     <table class="table mb-0">
                                         <thead class="bg-light">
                                         <tr>
                                             <th scope="col" class="border-0">是否删除</th>
-                                            <th scope="col" class="border-0">部门编号</th>
-                                            <th scope="col" class="border-0">部门名称</th>
+                                            <th scope="col" class="border-0">编号</th>
+                                            <th scope="col" class="border-0">姓名</th>
+                                            <th scope="col" class="border-0">年龄</th>
+                                            <th scope="col" class="border-0">性别</th>
+                                            <th scope="col" class="border-0">部门</th>
+                                            <th scope="col" class="border-0">教育</th>
+                                            <th scope="col" class="border-0">薪资</th>
                                         </tr>
                                         </thead>
                                         <tbody>
-                                            <%
-                                                try {
-                                                    department.setUsername((String) session.getAttribute("username"));
-                                                    department.setPassword((String) session.getAttribute("password"));
-                                                    department.connect();
-                                                    String sql="select * from department;";
-                                                    ResultSet resultSet = department.executeQuery(sql);
-                                                    int count = 0;
-                                                    while (resultSet.next()){
-                                            %>
-                                            <tr>
-                                                <td><div class="custom-control custom-checkbox mb-1">
-                                                    <input type="checkbox" id="<%=count+"checkbox"%>" class="custom-control-input" name="checkbox" value="<%=resultSet.getString("name")%>">
-                                                    <label class="custom-control-label" for="<%=count+"checkbox"%>"><%=resultSet.getString("name")%></label>
-                                                </div></td>
-                                                <td><input type="text" readonly="readonly" class="form-control" name="<%=count + "number"%>" value="<%=resultSet.getInt("number")%>"></td>
-                                                <td><input type="text" class="form-control" name="<%=count + "name"%>" value="<%=resultSet.getString("name")%>"></td>
-                                            </tr>
-                                            <%
-                                                        count++;
-                                                    }
-                                                    session.setAttribute("count",count);
-                                                    department.disconnect();
-                                                }catch (Exception e){
-                                                    e.printStackTrace();
+                                        <%
+                                            try {
+                                                department.setUsername((String) session.getAttribute("username"));
+                                                department.setPassword((String) session.getAttribute("password"));
+                                                department.connect();
+                                                String sql="select * from staff;";
+                                                ResultSet resultSet = department.executeQuery(sql);
+                                                int count = 0;
+                                                while (resultSet.next()){
+                                        %>
+                                        <tr>
+                                            <td><div class="custom-control custom-checkbox mb-1">
+                                                <input type="checkbox" id="<%=count+"checkbox"%>" class="custom-control-input" name="checkbox" value="<%=resultSet.getString("name")%>">
+                                                <label class="custom-control-label" for="<%=count+"checkbox"%>"><%=resultSet.getString("name")%></label>
+                                            </div></td>
+                                            <td><input type="text" readonly="readonly" class="form-control" name="<%=count + "number"%>" value="<%=resultSet.getInt("number")%>"></td>
+                                            <td><input type="text" class="form-control" name="<%=count + "name"%>" value="<%=resultSet.getString("name")%>"></td>
+                                            <td><input type="text" class="form-control" name="<%=count + "age"%>" value="<%=resultSet.getInt("age")%>"></td>
+                                            <td><input type="text" class="form-control" name="<%=count + "sex"%>" value="<%=resultSet.getString("sex")%>"></td>
+                                            <td><input type="text" class="form-control" name="<%=count + "department"%>" value="<%=resultSet.getString("department")%>"></td>
+                                            <td><input type="text" class="form-control" name="<%=count + "edu"%>" value="<%=resultSet.getString("edu")%>"></td>
+                                            <td><input type="text" class="form-control" name="<%=count + "salary"%>" value="<%=resultSet.getString("salary")%>"></td>
+                                        </tr>
+                                        <%
+                                                    count++;
                                                 }
+                                                session.setAttribute("count",count);
+                                                department.disconnect();
+                                            }catch (Exception e){
+                                                e.printStackTrace();
+                                            }
 
-                                            %>
+                                        %>
                                         </tbody>
                                     </table>
                                 </div>
@@ -174,20 +184,30 @@
                         <div class="col">
                             <div class="card card-small overflow-hidden mb-4">
                                 <div class="card-header bg-dark">
-                                    <h6 class="m-0 text-white">添加部门</h6>
+                                    <h6 class="m-0 text-white">添加</h6>
                                 </div>
                                 <div class="card-body p-0 pb-3 bg-dark text-center">
                                     <table class="table table-dark mb-0">
                                         <thead class="thead-dark">
                                         <tr>
-                                            <th scope="col" class="border-bottom-0">部门编号</th>
-                                            <th scope="col" class="border-bottom-0">部门名称</th>
+                                            <th scope="col" class="border-bottom-0">编号</th>
+                                            <th scope="col" class="border-bottom-0">名称</th>
+                                            <th scope="col" class="border-bottom-0">年龄</th>
+                                            <th scope="col" class="border-bottom-0">性别</th>
+                                            <th scope="col" class="border-bottom-0">部门</th>
+                                            <th scope="col" class="border-bottom-0">教育</th>
+                                            <th scope="col" class="border-bottom-0">薪资</th>
                                         </tr>
                                         </thead>
                                         <tbody>
                                         <tr>
                                             <td><input type="number" class="form-control" name="add_number"></td>
                                             <td><input type="text" class="form-control" name="add_name"></td>
+                                            <td><input type="number" class="form-control" name="add_age"></td>
+                                            <td><input type="text" class="form-control" name="add_sex"></td>
+                                            <td><input type="text" class="form-control" name="add_department"></td>
+                                            <td><input type="text" class="form-control" name="add_edu"></td>
+                                            <td><input type="text" class="form-control" name="add_salary"></td>
                                         </tr>
                                         </tbody>
                                     </table>
@@ -198,6 +218,7 @@
                     <!-- End Default Dark Table -->
                     <div class="col text-center view-report">
                         <button type="submit" class="btn btn-accent" >保存更改</button>
+                        <button type="button" class="btn btn-accent" >录用</button>
                     </div>
                 </div>
             </form>
