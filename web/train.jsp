@@ -106,7 +106,7 @@
         </aside>
         <!-- End Main Sidebar -->
         <main class="main-content col-lg-10 col-md-9 col-sm-12 p-0 offset-lg-2 offset-md-3">
-            <form method="post" action="edit_staff.jsp">
+            <form method="post" action="edit_train.jsp">
                 <!-- / .main-navbar -->
                 <div class="main-content-container container-fluid px-4">
                     <!-- Page Header -->
