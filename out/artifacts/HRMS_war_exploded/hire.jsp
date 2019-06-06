@@ -159,7 +159,7 @@
                                             </div></td>
                                             <td><input type="text" class="form-control" name="<%=count + "number" %>" value="<%=resultSet.getInt("number")%>" readonly="readonly"></td>
                                             <td><input type="text" class="form-control" name="<%=count + "name"%>" value="<%=resultSet.getString("name")%>"></td>
-                                            <td><input type="text" class="form-control" name="<%=count + "age"%>" value="<%=resultSet.getInt("age")%>"></td>
+                                            <td><input type="number" class="form-control" name="<%=count + "age"%>" value="<%=resultSet.getInt("age")%>"></td>
                                             <td><input type="text" class="form-control" name="<%=count + "sex"%>" value="<%=resultSet.getString("sex")%>"></td>
                                             <td><input type="text" class="form-control" name="<%=count + "department"%>" value="<%=resultSet.getString("department")%>"></td>
                                         </tr>

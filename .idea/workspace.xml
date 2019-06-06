@@ -10,54 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d3907f3-5c41-4f96-b5c5-f172571c6c80" name="Default Changelist" comment="完成部门管理功能,修复一些问题">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/train.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/department.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/department.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/hire.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/hire.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/avatars/0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/avatars/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/avatars/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/avatars/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/content-management/1.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/content-management/10.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/content-management/11.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/content-management/12.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/content-management/13.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/content-management/14.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/content-management/15.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/content-management/16.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/content-management/2.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/content-management/3.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/content-management/4.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/content-management/5.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/content-management/6.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/content-management/7.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/content-management/8.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/content-management/9.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/shards-dashboards-logo-danger.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/shards-dashboards-logo-info.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/shards-dashboards-logo-secondary.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/shards-dashboards-logo-success.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/shards-dashboards-logo-warning.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/shards-dashboards-logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/scripts/Chart.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/scripts/app/app-blog-new-post.1.1.0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/scripts/app/app-blog-new-post.1.1.0.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/scripts/app/app-blog-overview.1.1.0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/scripts/app/app-blog-overview.1.1.0.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/scripts/app/app-components-overview.1.1.0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/scripts/app/app-components-overview.1.1.0.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/scripts/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/scripts/extras.1.1.0.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/scripts/jquery-3.3.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/scripts/jquery.sharrre.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/scripts/popper.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/scripts/shards-dashboards.1.1.0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/scripts/shards-dashboards.1.1.0.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/scripts/shards-dashboards.1.1.0.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/scripts/shards.min.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/staff.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/staff.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/train.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/train.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -141,8 +96,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/staff.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-168">
-              <caret line="68" column="60" selection-start-line="68" selection-start-column="60" selection-end-line="68" selection-end-column="60" />
+            <state relative-caret-position="-948">
+              <caret line="156" column="67" selection-start-line="156" selection-start-column="67" selection-end-line="156" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -150,8 +105,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/hire.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="72" column="25" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
+            <state relative-caret-position="240">
+              <caret line="161" column="67" selection-start-line="161" selection-start-column="67" selection-end-line="161" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -159,7 +114,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/department.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
+            <state relative-caret-position="-1560">
               <caret line="68" column="60" selection-start-line="68" selection-start-column="60" selection-end-line="68" selection-end-column="60" />
             </state>
           </provider>
@@ -195,8 +150,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/train.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1040">
-              <caret line="144" column="79" selection-start-line="144" selection-start-column="79" selection-end-line="144" selection-end-column="79" />
+            <state relative-caret-position="220">
+              <caret line="156" column="67" selection-start-line="156" selection-start-column="67" selection-end-line="156" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -242,8 +197,8 @@
         <option value="$PROJECT_DIR$/web/edit_department.jsp" />
         <option value="$PROJECT_DIR$/src/com/connect_database.java" />
         <option value="$PROJECT_DIR$/web/traim.jsp" />
-        <option value="$PROJECT_DIR$/web/staff.jsp" />
         <option value="$PROJECT_DIR$/web/department.jsp" />
+        <option value="$PROJECT_DIR$/web/staff.jsp" />
         <option value="$PROJECT_DIR$/web/hire.jsp" />
         <option value="$PROJECT_DIR$/web/train.jsp" />
       </list>
@@ -432,7 +387,7 @@
       <workItem from="1559780586608" duration="585000" />
       <workItem from="1559781203367" duration="121000" />
       <workItem from="1559781397899" duration="9587000" />
-      <workItem from="1559804643452" duration="1645000" />
+      <workItem from="1559804643452" duration="1818000" />
     </task>
     <task id="LOCAL-00001" summary="完成一部分功能">
       <created>1559643926795</created>
@@ -459,7 +414,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55284000" />
+    <option name="totallyTimeSpent" value="55457000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -472,8 +427,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.27878466" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27878466" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -690,13 +646,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/department.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="68" column="60" selection-start-line="68" selection-start-column="60" selection-end-line="68" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-510">
@@ -706,22 +655,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/staff.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-168">
-          <caret line="68" column="60" selection-start-line="68" selection-start-column="60" selection-end-line="68" selection-end-column="60" />
+        <state relative-caret-position="-948">
+          <caret line="156" column="67" selection-start-line="156" selection-start-column="67" selection-end-line="156" selection-end-column="67" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/hire.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="72" column="25" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
+        <state relative-caret-position="240">
+          <caret line="161" column="67" selection-start-line="161" selection-start-column="67" selection-end-line="161" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/department.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1560">
+          <caret line="68" column="60" selection-start-line="68" selection-start-column="60" selection-end-line="68" selection-end-column="60" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/train.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1040">
-          <caret line="144" column="79" selection-start-line="144" selection-start-column="79" selection-end-line="144" selection-end-column="79" />
+        <state relative-caret-position="220">
+          <caret line="156" column="67" selection-start-line="156" selection-start-column="67" selection-end-line="156" selection-end-column="67" />
         </state>
       </provider>
     </entry>
