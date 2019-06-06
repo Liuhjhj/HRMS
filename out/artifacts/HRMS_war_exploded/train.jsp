@@ -6,13 +6,13 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<jsp:useBean id="department" class="com.connect_database"/>
+<jsp:useBean id="train" class="com.connect_database"/>
 <!doctype html>
 <html class="no-js h-100" lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>部门管理</title>
+    <title>培训管理</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="css/all.css" rel="stylesheet">
@@ -48,7 +48,7 @@
             <div class="nav-wrapper">
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link active" href="department.jsp">
+                        <a class="nav-link " href="department.jsp">
                             <i class="material-icons">edit</i>
                             <span>部门管理</span>
                         </a>
@@ -66,7 +66,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="train.jsp">
+                        <a class="nav-link active" href="train.jsp">
                             <i class="material-icons">view_module</i>
                             <span>培训管理</span>
                         </a>
@@ -106,14 +106,14 @@
         </aside>
         <!-- End Main Sidebar -->
         <main class="main-content col-lg-10 col-md-9 col-sm-12 p-0 offset-lg-2 offset-md-3">
-            <form method="post" action="edit_department.jsp">
-            <!-- / .main-navbar -->
+            <form method="post" action="edit_staff.jsp">
+                <!-- / .main-navbar -->
                 <div class="main-content-container container-fluid px-4">
-                <!-- Page Header -->
+                    <!-- Page Header -->
                     <div class="page-header row no-gutters py-4">
                         <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
                             <span class="text-uppercase page-subtitle">Overview</span>
-                            <h3 class="page-title">部门数据表</h3>
+                            <h3 class="page-title">培训数据表</h3>
                         </div>
                     </div>
                     <!-- End Page Header -->
@@ -122,46 +122,52 @@
                         <div class="col">
                             <div class="card card-small mb-4">
                                 <div class="card-header border-bottom">
-                                    <h6 class="m-0">修改部门</h6>
+                                    <h6 class="m-0">修改</h6>
                                 </div>
                                 <div class="card-body p-0 pb-3 text-center">
                                     <table class="table mb-0">
                                         <thead class="bg-light">
                                         <tr>
                                             <th scope="col" class="border-0">是否删除</th>
-                                            <th scope="col" class="border-0">部门编号</th>
-                                            <th scope="col" class="border-0">部门名称</th>
+                                            <th scope="col" class="border-0">培训编号</th>
+                                            <th scope="col" class="border-0">培训人</th>
+                                            <th scope="col" class="border-0">年龄</th>
+                                            <th scope="col" class="border-0">性别</th>
+                                            <th scope="col" class="border-0">部门</th>
                                         </tr>
                                         </thead>
                                         <tbody>
-                                            <%
-                                                try {
-                                                    department.setUsername((String) session.getAttribute("username"));
-                                                    department.setPassword((String) session.getAttribute("password"));
-                                                    department.connect();
-                                                    String sql="select * from department;";
-                                                    ResultSet resultSet = department.executeQuery(sql);
-                                                    int count = 0;
-                                                    while (resultSet.next()){
-                                            %>
-                                            <tr>
-                                                <td><div class="custom-control custom-checkbox mb-1">
-                                                    <input type="checkbox" id="<%=count+"checkbox"%>" class="custom-control-input" name="checkbox" value="<%=resultSet.getString("number")%>">
-                                                    <label class="custom-control-label" for="<%=count+"checkbox"%>"><%=resultSet.getString("name")%></label>
-                                                </div></td>
-                                                <td><input type="text" readonly="readonly" class="form-control" name="<%=count + "number"%>" value="<%=resultSet.getInt("number")%>"></td>
-                                                <td><input type="text" class="form-control" name="<%=count + "name"%>" value="<%=resultSet.getString("name")%>"></td>
-                                            </tr>
-                                            <%
-                                                        count++;
-                                                    }
-                                                    session.setAttribute("count",count);
-                                                    department.disconnect();
-                                                }catch (Exception e){
-                                                    e.printStackTrace();
+                                        <%
+                                            try {
+                                                train.setUsername((String) session.getAttribute("username"));
+                                                train.setPassword((String) session.getAttribute("password"));
+                                                train.connect();
+                                                String sql="select * from train;";
+                                                ResultSet resultSet = train.executeQuery(sql);
+                                                int count = 0;
+                                                while (resultSet.next()){
+                                        %>
+                                        <tr>
+                                            <td><div class="custom-control custom-checkbox mb-1">
+                                                <input type="checkbox" id="<%=count+"checkbox"%>" class="custom-control-input" name="checkbox" value="<%=resultSet.getString("number")%>">
+                                                <label class="custom-control-label" for="<%=count+"checkbox"%>"><%=resultSet.getString("name")%></label>
+                                            </div></td>
+                                            <td><input type="text" readonly="readonly" class="form-control" name="<%=count + "number"%>" value="<%=resultSet.getInt("number")%>"></td>
+                                            <td><input type="text" class="form-control" name="<%=count + "name"%>" value="<%=resultSet.getString("name")%>"></td>
+                                            <td><input type="text" class="form-control" name="<%=count + "age"%>" value="<%=resultSet.getInt("age")%>"></td>
+                                            <td><input type="text" class="form-control" name="<%=count + "sex"%>" value="<%=resultSet.getString("sex")%>"></td>
+                                            <td><input type="text" class="form-control" name="<%=count + "department"%>" value="<%=resultSet.getString("department")%>"></td>
+                                        </tr>
+                                        <%
+                                                    count++;
                                                 }
+                                                session.setAttribute("count",count);
+                                                train.disconnect();
+                                            }catch (Exception e){
+                                                e.printStackTrace();
+                                            }
 
-                                            %>
+                                        %>
                                         </tbody>
                                     </table>
                                 </div>
@@ -174,18 +180,24 @@
                         <div class="col">
                             <div class="card card-small overflow-hidden mb-4">
                                 <div class="card-header bg-dark">
-                                    <h6 class="m-0 text-white">添加部门</h6>
+                                    <h6 class="m-0 text-white">添加</h6>
                                 </div>
                                 <div class="card-body p-0 pb-3 bg-dark text-center">
                                     <table class="table table-dark mb-0">
                                         <thead class="thead-dark">
                                         <tr>
-                                            <th scope="col" class="border-bottom-0">部门名称</th>
+                                            <th scope="col" class="border-bottom-0">培训人</th>
+                                            <th scope="col" class="border-bottom-0">年龄</th>
+                                            <th scope="col" class="border-bottom-0">性别</th>
+                                            <th scope="col" class="border-bottom-0">部门</th>
                                         </tr>
                                         </thead>
                                         <tbody>
                                         <tr>
                                             <td><input type="text" class="form-control" name="add_name"></td>
+                                            <td><input type="number" class="form-control" name="add_age"></td>
+                                            <td><input type="text" class="form-control" name="add_sex"></td>
+                                            <td><input type="text" class="form-control" name="add_department"></td>
                                         </tr>
                                         </tbody>
                                     </table>

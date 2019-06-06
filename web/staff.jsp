@@ -6,13 +6,13 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<jsp:useBean id="department" class="com.connect_database"/>
+<jsp:useBean id="staff" class="com.connect_database"/>
 <!doctype html>
 <html class="no-js h-100" lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>首页</title>
+    <title>员工管理</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="css/all.css" rel="stylesheet">
@@ -66,7 +66,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="form-components.html">
+                        <a class="nav-link " href="train.jsp">
                             <i class="material-icons">view_module</i>
                             <span>培训管理</span>
                         </a>
@@ -139,11 +139,11 @@
                                         <tbody>
                                         <%
                                             try {
-                                                department.setUsername((String) session.getAttribute("username"));
-                                                department.setPassword((String) session.getAttribute("password"));
-                                                department.connect();
+                                                staff.setUsername((String) session.getAttribute("username"));
+                                                staff.setPassword((String) session.getAttribute("password"));
+                                                staff.connect();
                                                 String sql="select * from staff;";
-                                                ResultSet resultSet = department.executeQuery(sql);
+                                                ResultSet resultSet = staff.executeQuery(sql);
                                                 int count = 0;
                                                 while (resultSet.next()){
                                         %>
@@ -162,7 +162,7 @@
                                                     count++;
                                                 }
                                                 session.setAttribute("count",count);
-                                                department.disconnect();
+                                                staff.disconnect();
                                             }catch (Exception e){
                                                 e.printStackTrace();
                                             }

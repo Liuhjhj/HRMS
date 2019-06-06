@@ -12,7 +12,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>首页</title>
+    <title>部门管理</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="css/all.css" rel="stylesheet">
@@ -66,7 +66,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="form-components.html">
+                        <a class="nav-link " href="train.jsp">
                             <i class="material-icons">view_module</i>
                             <span>培训管理</span>
                         </a>
