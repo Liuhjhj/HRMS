@@ -26,7 +26,7 @@
                     for (int i = 0; i < deleteString.length; i++) {
                         delete = deleteString[i];
                         if (delete != null) {
-                            String sql = "delete from department where name='" + delete + "';";
+                            String sql = "delete from department where number='" + delete + "';";
                             edit.executeUpdate(sql);
                         }
                     }

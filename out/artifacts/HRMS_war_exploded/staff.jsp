@@ -149,7 +149,7 @@
                                         %>
                                         <tr>
                                             <td><div class="custom-control custom-checkbox mb-1">
-                                                <input type="checkbox" id="<%=count+"checkbox"%>" class="custom-control-input" name="checkbox" value="<%=resultSet.getString("name")%>">
+                                                <input type="checkbox" id="<%=count+"checkbox"%>" class="custom-control-input" name="checkbox" value="<%=resultSet.getString("number")%>">
                                                 <label class="custom-control-label" for="<%=count+"checkbox"%>"><%=resultSet.getString("name")%></label>
                                             </div></td>
                                             <td><input type="text" readonly="readonly" class="form-control" name="<%=count + "number"%>" value="<%=resultSet.getInt("number")%>"></td>

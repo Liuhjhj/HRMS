@@ -106,7 +106,7 @@
         </aside>
         <!-- End Main Sidebar -->
         <main class="main-content col-lg-10 col-md-9 col-sm-12 p-0 offset-lg-2 offset-md-3">
-            <form method="post" action="edit_staff.jsp">
+            <form method="post" action="edit_hire.jsp">
                 <!-- / .main-navbar -->
                 <div class="main-content-container container-fluid px-4">
                     <!-- Page Header -->
@@ -135,8 +135,6 @@
                                             <th scope="col" class="border-0">年龄</th>
                                             <th scope="col" class="border-0">性别</th>
                                             <th scope="col" class="border-0">部门</th>
-                                            <th scope="col" class="border-0">教育</th>
-                                            <th scope="col" class="border-0">薪资</th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -152,20 +150,18 @@
                                         %>
                                         <tr>
                                             <td><div class="custom-control custom-checkbox mb-1">
-                                                <input type="checkbox" id="<%=count+"checkbox_hire"%>" class="custom-control-input" name="checkbox" value="<%=resultSet.getString("name")%>">
+                                                <input type="checkbox" id="<%=count+"checkbox_hire"%>" class="custom-control-input" name="checkbox_hire" value="<%=resultSet.getString("number")%>">
                                                 <label class="custom-control-label" for="<%=count+"checkbox_hire"%>"><%=resultSet.getString("name")%></label>
                                             </div></td>
                                             <td><div class="custom-control custom-checkbox mb-1">
-                                                <input type="checkbox" id="<%=count+"checkbox_delete"%>" class="custom-control-input" name="checkbox" value="<%=resultSet.getString("name")%>">
-                                                <label class="custom-control-label" for="<%=count+"checkbox_delete"%>"><%=resultSet.getString("name")%></label>
+                                                <input type="checkbox" id="<%=count+"checkbox_delete"%>" class="custom-control-input" name="checkbox_delete" value="<%=resultSet.getString("number")%>">
+                                                <label class="custom-control-label" for="<%=count+"checkbox_delete"%>"><%=resultSet.getString("department")%></label>
                                             </div></td>
-                                            <td><input type="text" readonly="readonly" class="form-control" name="<%=count + "number"%>" value="<%=resultSet.getInt("number")%>"></td>
+                                            <td><input type="text" class="form-control" name="<%=count + "number" %>" value="<%=resultSet.getInt("number")%>" readonly="readonly"></td>
                                             <td><input type="text" class="form-control" name="<%=count + "name"%>" value="<%=resultSet.getString("name")%>"></td>
                                             <td><input type="text" class="form-control" name="<%=count + "age"%>" value="<%=resultSet.getInt("age")%>"></td>
                                             <td><input type="text" class="form-control" name="<%=count + "sex"%>" value="<%=resultSet.getString("sex")%>"></td>
                                             <td><input type="text" class="form-control" name="<%=count + "department"%>" value="<%=resultSet.getString("department")%>"></td>
-                                            <td><input type="text" class="form-control" name="<%=count + "edu"%>" value="<%=resultSet.getString("edu")%>"></td>
-                                            <td><input type="text" class="form-control" name="<%=count + "salary"%>" value="<%=resultSet.getString("salary")%>"></td>
                                         </tr>
                                         <%
                                                     count++;
@@ -194,24 +190,18 @@
                                     <table class="table table-dark mb-0">
                                         <thead class="thead-dark">
                                         <tr>
-                                            <th scope="col" class="border-bottom-0">编号</th>
-                                            <th scope="col" class="border-bottom-0">名称</th>
+                                            <th scope="col" class="border-bottom-0">姓名</th>
                                             <th scope="col" class="border-bottom-0">年龄</th>
                                             <th scope="col" class="border-bottom-0">性别</th>
                                             <th scope="col" class="border-bottom-0">部门</th>
-                                            <th scope="col" class="border-bottom-0">教育</th>
-                                            <th scope="col" class="border-bottom-0">薪资</th>
                                         </tr>
                                         </thead>
                                         <tbody>
                                         <tr>
-                                            <td><input type="number" class="form-control" name="add_number"></td>
                                             <td><input type="text" class="form-control" name="add_name"></td>
                                             <td><input type="number" class="form-control" name="add_age"></td>
                                             <td><input type="text" class="form-control" name="add_sex"></td>
                                             <td><input type="text" class="form-control" name="add_department"></td>
-                                            <td><input type="text" class="form-control" name="add_edu"></td>
-                                            <td><input type="text" class="form-control" name="add_salary"></td>
                                         </tr>
                                         </tbody>
                                     </table>
