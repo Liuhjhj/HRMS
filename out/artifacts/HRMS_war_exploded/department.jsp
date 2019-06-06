@@ -180,13 +180,11 @@
                                     <table class="table table-dark mb-0">
                                         <thead class="thead-dark">
                                         <tr>
-                                            <th scope="col" class="border-bottom-0">部门编号</th>
                                             <th scope="col" class="border-bottom-0">部门名称</th>
                                         </tr>
                                         </thead>
                                         <tbody>
                                         <tr>
-                                            <td><input type="number" class="form-control" name="add_number"></td>
                                             <td><input type="text" class="form-control" name="add_name"></td>
                                         </tr>
                                         </tbody>

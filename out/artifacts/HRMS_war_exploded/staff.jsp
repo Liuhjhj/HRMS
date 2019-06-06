@@ -186,7 +186,6 @@
                                     <table class="table table-dark mb-0">
                                         <thead class="thead-dark">
                                         <tr>
-                                            <th scope="col" class="border-bottom-0">员工编号</th>
                                             <th scope="col" class="border-bottom-0">员工名称</th>
                                             <th scope="col" class="border-bottom-0">员工年龄</th>
                                             <th scope="col" class="border-bottom-0">员工性别</th>
@@ -195,7 +194,6 @@
                                         </thead>
                                         <tbody>
                                         <tr>
-                                            <td><input type="number" class="form-control" name="add_number"></td>
                                             <td><input type="text" class="form-control" name="add_name"></td>
                                             <td><input type="number" class="form-control" name="add_age"></td>
                                             <td><input type="text" class="form-control" name="add_sex"></td>

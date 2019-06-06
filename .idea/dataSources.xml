@@ -15,6 +15,7 @@
         <property name="yearIsDateType" value="false" />
         <property name="useSSL" value="FALSE" />
         <property name="serverTimezone" value="UTC" />
+        <property name="allowPublicKeyRetrieval" value="FALSE" />
       </driver-properties>
     </data-source>
   </component>

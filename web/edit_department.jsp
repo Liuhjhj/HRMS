@@ -49,9 +49,8 @@
         }
         try {
             String add_name=request.getParameter("add_name");   //添加数据
-            String add_number=request.getParameter("add_number");
-            if ((!add_name.equals("")) && (!add_number.equals(""))) {
-                String sql = "insert into department values(" + add_number + ",'" + add_name + "');";
+            if ((!add_name.equals(""))) {
+                String sql = "insert into department values(null,'" + add_name + "');";
                 edit.executeUpdate(sql);
             }
             edit.disconnect();
