@@ -9,7 +9,7 @@
 <jsp:useBean id="edit" class="com.connect_database"/>
 <html>
 <head>
-    <title>保存员工信息</title>
+    <title>保存薪资信息</title>
 </head>
 <body>
 <%
