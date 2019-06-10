@@ -25,7 +25,7 @@
         }
         response.setCharacterEncoding("utf-8"); //弹出窗口
         PrintWriter output = response.getWriter();
-        output.print("<script>alert('保存完成'); " +
+        output.print("<script>alert('删除完成'); " +
                 "window.location='reward.jsp' </script>");
         output.flush();
         output.close();

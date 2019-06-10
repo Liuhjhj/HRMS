@@ -78,19 +78,19 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="user-profile-lite.html">
+                        <a class="nav-link " href="salary.jsp">
                             <i class="material-icons">person</i>
                             <span>薪资管理</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="errors.html">
+                        <a class="nav-link " href="system.jsp">
                             <i class="material-icons">error</i>
                             <span>系统管理</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="errors.html">
+                        <a class="nav-link " href="user.jsp">
                             <i class="material-icons">error</i>
                             <span>用户修改</span>
                         </a>

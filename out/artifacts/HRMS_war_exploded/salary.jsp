@@ -6,13 +6,13 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<jsp:useBean id="staff" class="com.connect_database"/>
+<jsp:useBean id="salary" class="com.connect_database"/>
 <!doctype html>
 <html class="no-js h-100" lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>员工管理</title>
+    <title>薪资管理</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="css/all.css" rel="stylesheet">
@@ -54,7 +54,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="staff.jsp">
+                        <a class="nav-link " href="staff.jsp">
                             <i class="material-icons">vertical_split</i>
                             <span>员工管理</span>
                         </a>
@@ -78,7 +78,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="salary.jsp">
+                        <a class="nav-link active" href="salary.jsp">
                             <i class="material-icons">person</i>
                             <span>薪资管理</span>
                         </a>
@@ -106,7 +106,7 @@
         </aside>
         <!-- End Main Sidebar -->
         <main class="main-content col-lg-10 col-md-9 col-sm-12 p-0 offset-lg-2 offset-md-3">
-            <form method="post" action="edit_staff.jsp">
+            <form method="post" action="edit_salary.jsp">
                 <!-- / .main-navbar -->
                 <div class="main-content-container container-fluid px-4">
                     <!-- Page Header -->
@@ -134,16 +134,17 @@
                                             <th scope="col" class="border-0">员工年龄</th>
                                             <th scope="col" class="border-0">员工性别</th>
                                             <th scope="col" class="border-0">员工部门</th>
+                                            <th scope="col" class="border-0">员工薪资</th>
                                         </tr>
                                         </thead>
                                         <tbody>
                                         <%
                                             try {
-                                                staff.setUsername((String) session.getAttribute("username"));
-                                                staff.setPassword((String) session.getAttribute("password"));
-                                                staff.connect();
-                                                String sql="select * from staff;";
-                                                ResultSet resultSet = staff.executeQuery(sql);
+                                                salary.setUsername((String) session.getAttribute("username"));
+                                                salary.setPassword((String) session.getAttribute("password"));
+                                                salary.connect();
+                                                String sql="select * from salary;";
+                                                ResultSet resultSet = salary.executeQuery(sql);
                                                 int count = 0;
                                                 while (resultSet.next()){
                                         %>
@@ -157,12 +158,13 @@
                                             <td><input type="number" class="form-control" name="<%=count + "age"%>" value="<%=resultSet.getInt("age")%>"></td>
                                             <td><input type="text" class="form-control" name="<%=count + "sex"%>" value="<%=resultSet.getString("sex")%>"></td>
                                             <td><input type="text" class="form-control" name="<%=count + "department"%>" value="<%=resultSet.getString("department")%>"></td>
+                                            <td><input type="text" class="form-control" name="<%=count + "salary"%>" value="<%=resultSet.getString("salary")%>"></td>
                                         </tr>
                                         <%
                                                     count++;
                                                 }
                                                 session.setAttribute("count",count);
-                                                staff.disconnect();
+                                                salary.disconnect();
                                             }catch (Exception e){
                                                 e.printStackTrace();
                                             }
@@ -190,6 +192,7 @@
                                             <th scope="col" class="border-bottom-0">员工年龄</th>
                                             <th scope="col" class="border-bottom-0">员工性别</th>
                                             <th scope="col" class="border-bottom-0">员工部门</th>
+                                            <th scope="col" class="border-bottom-0">员工薪资</th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -198,6 +201,7 @@
                                             <td><input type="number" class="form-control" name="add_age"></td>
                                             <td><input type="text" class="form-control" name="add_sex"></td>
                                             <td><input type="text" class="form-control" name="add_department"></td>
+                                            <td><input type="text" class="form-control" name="add_salary"></td>
                                         </tr>
                                         </tbody>
                                     </table>
