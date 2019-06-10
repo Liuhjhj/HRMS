@@ -72,7 +72,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="tables.html">
+                        <a class="nav-link " href="reward.jsp">
                             <i class="material-icons">table_chart</i>
                             <span>奖惩管理</span>
                         </a>
