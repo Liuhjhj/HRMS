@@ -28,7 +28,7 @@ public class connect_database {
     public boolean connect(){
         try{
             Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
-            String url="jdbc:mysql://localhost:3306/hrms?serverTimezone=UTC&useUnicode=true" +
+            String url="jdbc:mysql://10.1.11.210:3306/hrms?serverTimezone=UTC&useUnicode=true" +
                     "&characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true";
             connection = DriverManager.getConnection(url,username,password);
             return connection != null;
