@@ -49,23 +49,16 @@
                         "','"+ add_username + "','" + add_password + "');";
                 system.executeUpdate(sql);
             }
-            system.disconnect();
-            response.setCharacterEncoding("utf-8"); //弹出窗口
-            PrintWriter output = response.getWriter();
-            output.print("<script>alert('创建完成'); " +
-                    "window.location='system.jsp' </script>");
-            output.flush();
-            output.close();
         }catch (Exception e){
             e.printStackTrace();
-            system.disconnect();
-            response.setCharacterEncoding("utf-8"); //弹出窗口
-            PrintWriter output = response.getWriter();
-            output.print("<script>alert('操作失败,请确认你是否具有相应权限'); " +
-                    "window.location='system.jsp' </script>");
-            output.flush();
-            output.close();
         }
+        system.disconnect();
+        response.setCharacterEncoding("utf-8"); //弹出窗口
+        PrintWriter output = response.getWriter();
+        output.print("<script>alert('修改完成'); " +
+                "window.location='system.jsp' </script>");
+        output.flush();
+        output.close();
     %>
 </body>
 </html>
