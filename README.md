@@ -33,3 +33,5 @@
     (2)下载本工程使用Intellij Idea导入或者直接用链接https://github.com/Liuhjhj/HRMS 在Idea上面克隆工程
     (3)利用Idea创建web工程详见https://www.jianshu.com/p/315697f8511c
     (4)本工程所需驱动位于/web/WEB-INF/lib目录下
+    (5)本工程网页基于网页模板修改,模板位于/网页源模板 目录下
+    (6)基于Intellij Idea 2019.1.3 Tomcat 9.0.20
