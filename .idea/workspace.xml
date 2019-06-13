@@ -10,15 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d3907f3-5c41-4f96-b5c5-f172571c6c80" name="Default Changelist" comment="完成部门管理功能,修复一些问题">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0b992a96-753b-4a07-a399-3b81e302adfb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0b992a96-753b-4a07-a399-3b81e302adfb.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HRMS_war_exploded/edit_hire.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HRMS_war_exploded/edit_hire.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HRMS_war_exploded/edit_salary.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HRMS_war_exploded/edit_salary.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HRMS_war_exploded/edit_train.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HRMS_war_exploded/edit_train.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/edit_hire.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/edit_hire.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/edit_salary.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/edit_salary.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/edit_system.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/edit_system.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/edit_train.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/edit_train.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/edit_user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/edit_user.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HRMS_war_exploded/edit_system.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HRMS_war_exploded/edit_system.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HRMS_war_exploded/edit_user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HRMS_war_exploded/edit_user.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,7 +54,7 @@
         <item name="admin" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="hrms: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="admin: table" type="285a2a93:MysqlImplModel$Table" />
+        <item name="department: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
@@ -79,8 +74,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/department.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
+            <state relative-caret-position="788">
               <caret line="151" column="138" selection-start-line="151" selection-start-column="121" selection-end-line="151" selection-end-column="138" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/edit_hire.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="630">
+              <caret line="21" column="78" selection-start-line="21" selection-start-column="78" selection-end-line="21" selection-end-column="78" />
             </state>
           </provider>
         </entry>
@@ -88,16 +92,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/edit_system.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="632">
-              <caret line="52" column="17" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
+            <state relative-caret-position="1110">
+              <caret line="37" column="69" selection-start-line="37" selection-start-column="69" selection-end-line="37" selection-end-column="69" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/edit_user.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
+            <state relative-caret-position="780">
               <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
             </state>
           </provider>
@@ -106,8 +110,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/edit_department.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+            <state relative-caret-position="1320">
+              <caret line="44" column="40" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/edit_reward.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3990">
+              <caret line="133" column="37" selection-start-line="133" selection-start-column="37" selection-end-line="133" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/reward.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="444">
+              <caret line="142" column="54" selection-start-line="142" selection-start-column="54" selection-end-line="142" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -156,7 +178,6 @@
         <option value="$PROJECT_DIR$/web/delete_reward.jsp" />
         <option value="$PROJECT_DIR$/web/department.jsp" />
         <option value="$PROJECT_DIR$/web/hire.jsp" />
-        <option value="$PROJECT_DIR$/web/reward.jsp" />
         <option value="$PROJECT_DIR$/web/staff.jsp" />
         <option value="$PROJECT_DIR$/web/train.jsp" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/0b992a96-753b-4a07-a399-3b81e302adfb/console.sql" />
@@ -172,8 +193,9 @@
         <option value="$PROJECT_DIR$/web/edit_hire.jsp" />
         <option value="$PROJECT_DIR$/web/edit_salary.jsp" />
         <option value="$PROJECT_DIR$/web/edit_train.jsp" />
-        <option value="$PROJECT_DIR$/web/edit_system.jsp" />
         <option value="$PROJECT_DIR$/web/edit_user.jsp" />
+        <option value="$PROJECT_DIR$/web/edit_system.jsp" />
+        <option value="$PROJECT_DIR$/web/reward.jsp" />
       </list>
     </option>
   </component>
@@ -203,8 +225,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -253,6 +273,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -405,7 +427,9 @@
       <workItem from="1560387880595" duration="616000" />
       <workItem from="1560391526846" duration="80000" />
       <workItem from="1560391701338" duration="824000" />
-      <workItem from="1560409392627" duration="161000" />
+      <workItem from="1560409392627" duration="2109000" />
+      <workItem from="1560413457036" duration="544000" />
+      <workItem from="1560414645330" duration="1369000" />
     </task>
     <task id="LOCAL-00001" summary="完成一部分功能">
       <created>1559643926795</created>
@@ -432,7 +456,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107834000" />
+    <option name="totallyTimeSpent" value="111695000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -457,7 +481,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32962137" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4978678" weight="0.3351893" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4978678" visible="true" weight="0.3351893" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -552,7 +576,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/departmentManagement.jsp" />
-    <entry file="das://0b992a96-753b-4a07-a399-3b81e302adfb/schema/hrms/table/department" />
     <entry file="file://$PROJECT_DIR$/bootstrap.min.css" />
     <entry file="file://$PROJECT_DIR$/web/css/checkboxstyle.css" />
     <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/servlet-api.jar!/javax/servlet/http/HttpServlet.class">
@@ -625,13 +648,6 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/0b992a96-753b-4a07-a399-3b81e302adfb/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/reward.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3300">
-          <caret line="110" column="40" selection-end-line="179" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/salary.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4830">
@@ -688,13 +704,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/edit_reward.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1238">
-          <caret line="103" column="59" selection-start-line="103" selection-start-column="59" selection-end-line="103" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/edit_salary.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
@@ -720,13 +729,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
           <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/edit_hire.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="21" column="78" selection-start-line="21" selection-start-column="78" selection-end-line="21" selection-end-column="78" />
         </state>
       </provider>
     </entry>
@@ -758,31 +760,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/department.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="151" column="138" selection-start-line="151" selection-start-column="121" selection-end-line="151" selection-end-column="138" />
+    <entry file="das://0b992a96-753b-4a07-a399-3b81e302adfb/schema/hrms/table/department">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="46b64118-02d8-423d-9b7e-2b257b58f942">
+          <filtering>
+            <filter text="" />
+          </filtering>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/edit_department.jsp">
+    <entry file="file://$PROJECT_DIR$/web/edit_hire.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+        <state relative-caret-position="630">
+          <caret line="21" column="78" selection-start-line="21" selection-start-column="78" selection-end-line="21" selection-end-column="78" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/edit_system.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="632">
-          <caret line="52" column="17" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
+        <state relative-caret-position="1110">
+          <caret line="37" column="69" selection-start-line="37" selection-start-column="69" selection-end-line="37" selection-end-column="69" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/edit_user.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
+        <state relative-caret-position="780">
           <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/edit_department.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1320">
+          <caret line="44" column="40" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/edit_reward.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3990">
+          <caret line="133" column="37" selection-start-line="133" selection-start-column="37" selection-end-line="133" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/department.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="788">
+          <caret line="151" column="138" selection-start-line="151" selection-start-column="121" selection-end-line="151" selection-end-column="138" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/reward.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="142" column="54" selection-start-line="142" selection-start-column="54" selection-end-line="142" selection-end-column="54" />
         </state>
       </provider>
     </entry>

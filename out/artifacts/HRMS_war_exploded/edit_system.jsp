@@ -22,14 +22,14 @@
             String[] deleteString = request.getParameterValues("checkbox");
             if (deleteString != null) {   //删除用户
                 if (deleteString.length > 0) {
-                    delete = deleteString[0];
                     for (int i = 0; i < deleteString.length; i++) {
                         delete = deleteString[i];
                         if (delete != null) {
                             String sql="drop user '"+delete+"'@'%'";    //先删除用户再从表中删除数据
-                            system.executeUpdate(sql);
-                            sql = "delete from admin where username='" + delete + "';";
-                            system.executeUpdate(sql);
+                            if(system.executeUpdate(sql)) {
+                                sql = "delete from admin where username='" + delete + "';";
+                                system.executeUpdate(sql);
+                            }
                         }
                     }
                 }
@@ -40,14 +40,15 @@
             if ((!add_name.equals("")) && (!add_username.equals(""))
                     && (!add_password.equals(""))) {    //先创建mysql用户,再插入用户数据到admin表
                 String sql="Create user '"+add_username+"'@'%' identified by '"+add_password+"';";
-                system.executeUpdate(sql);
-                sql="grant all privileges on *.* to '"+add_username+"'@'%' with grant option";
-                system.executeUpdate(sql);
-                sql="flush privileges;";
-                system.executeUpdate(sql);
-                sql = "insert into admin values(null,'" + add_name +
-                        "','"+ add_username + "','" + add_password + "');";
-                system.executeUpdate(sql);
+                if(system.executeUpdate(sql)){
+                    sql="grant all privileges on *.* to '"+add_username+"'@'%' with grant option";
+                    system.executeUpdate(sql);
+                    sql="flush privileges;";
+                    system.executeUpdate(sql);
+                    sql = "insert into admin values(null,'" + add_name +
+                            "','" + add_username + "','" + add_password + "');";
+                    system.executeUpdate(sql);
+                }
             }
         }catch (Exception e){
             e.printStackTrace();
