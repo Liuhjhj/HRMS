@@ -35,7 +35,7 @@
     }catch (Exception e) {
         e.printStackTrace();
     }
-    try {   //同时进行删除和更新操作会导致此try-catch块报错
+    try {
         int count = (int) session.getAttribute("count");
         session.removeAttribute("count");
         for (int i = 0; i <= count; i++) {  //更新数据
@@ -44,8 +44,8 @@
             String age = request.getParameter(i + "age");
             String sex = request.getParameter(i + "sex");
             String department = request.getParameter(i + "department");
-            if ((!name.equals("")) && (!number.equals(""))  //有try-catch块,这行if可要可不要
-                    && (!age.equals("")) && (!sex.equals(""))   //(不要的话可能会报SQL错误)
+            if ((!name.equals("")) && (!number.equals(""))
+                    && (!age.equals("")) && (!sex.equals(""))
                     && (!department.equals(""))) {
                 String sql = "update train set name = '" + name + "' " +
                         ", age = " + age + " "+
@@ -63,8 +63,8 @@
         String add_age = request.getParameter("add_age");
         String add_sex = request.getParameter("add_sex");
         String add_department = request.getParameter("add_department");
-        if ((!add_name.equals("")) && (!add_age.equals("")) //有try-catch块,这行if可要可不要
-                && (!add_sex.equals("")) && (!add_department.equals(""))) { //(不要的话可能会报SQL错误)
+        if ((!add_name.equals("")) && (!add_age.equals(""))
+                && (!add_sex.equals("")) && (!add_department.equals(""))) {
             String sql = "insert into train values(null,'" + add_name +
                     "',"+ add_age + ",'" + add_sex + "','" + add_department + "');";
             edit.executeUpdate(sql);

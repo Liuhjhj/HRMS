@@ -16,16 +16,16 @@
         request.setCharacterEncoding("UTF-8");
         edit.setUsername((String) session.getAttribute("username"));
         edit.setPassword((String) session.getAttribute("password"));
-        edit.connect();
-        try {
+        edit.connect(); //连接数据库
+        //删除-更新-添加
+        try {   //每一个操作(增删改)对应一个try-catch块
             String delete;
-            String[] deleteString = request.getParameterValues("checkbox");
-            if (deleteString != null) {   //删除数据
-                if (deleteString.length > 0) {
-                    delete = deleteString[0];
+            String[] deleteString = request.getParameterValues("checkbox"); //利用CheckBox传递数据库表中number(主键)的值
+            if (deleteString != null) {   //删除数据                         //若CheckBox的checked为true,CheckBox的value为number
+                if (deleteString.length > 0) {                              //否则value为null
                     for (int i = 0; i < deleteString.length; i++) {
                         delete = deleteString[i];
-                        if (delete != null) {
+                        if (delete != null) {   //检查delete是否==null来判断CheckBox的checked是否为true
                             String sql = "delete from department where number='" + delete + "';";
                             edit.executeUpdate(sql);
                         }
@@ -35,7 +35,7 @@
         }catch (Exception e) {
             e.printStackTrace();
         }
-        try {
+        try {   //同时进行删除和更新操作会导致此try-catch块报错
             int count = (int) session.getAttribute("count");
             session.removeAttribute("count");
             for (int i = 0; i <= count; i++) {  //更新数据
@@ -49,7 +49,7 @@
         }
         try {
             String add_name=request.getParameter("add_name");   //添加数据
-            if ((!add_name.equals(""))) {
+            if ((!add_name.equals(""))) {   //有try-catch块,这行if可去掉(去掉可能会报SQL错误)
                 String sql = "insert into department values(null,'" + add_name + "');";
                 edit.executeUpdate(sql);
             }
@@ -59,7 +59,7 @@
         }
         response.setCharacterEncoding("utf-8");
         PrintWriter output = response.getWriter();
-        output.print("<script>alert('保存完成'); " +
+        output.print("<script>alert('保存完成'); " +    //弹出窗口
                 "window.location='department.jsp' </script>");
         output.flush();
         output.close();

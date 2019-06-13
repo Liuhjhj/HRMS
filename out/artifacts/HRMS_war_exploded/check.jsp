@@ -18,7 +18,8 @@
         String password = request.getParameter("password");
         check.setUsername(username);
         check.setPassword(password);
-        if (check.connect()){
+        //接收index的用户名和密码作为登录数据库的账户和密码
+        if (check.connect()){   //登录成功,保存用户名和密码
             session.setAttribute("username",username);
             session.setAttribute("password",password);
             check.disconnect();

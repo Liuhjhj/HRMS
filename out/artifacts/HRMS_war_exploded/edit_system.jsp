@@ -26,7 +26,7 @@
                     for (int i = 0; i < deleteString.length; i++) {
                         delete = deleteString[i];
                         if (delete != null) {
-                            String sql="drop user '"+delete+"'@'%'";
+                            String sql="drop user '"+delete+"'@'%'";    //先删除用户再从表中删除数据
                             system.executeUpdate(sql);
                             sql = "delete from admin where username='" + delete + "';";
                             system.executeUpdate(sql);
@@ -38,7 +38,7 @@
             String add_username=request.getParameter("add_username");
             String add_password=request.getParameter("add_password");
             if ((!add_name.equals("")) && (!add_username.equals(""))
-                    && (!add_password.equals(""))) {
+                    && (!add_password.equals(""))) {    //先创建mysql用户,再插入用户数据到admin表
                 String sql="Create user '"+add_username+"'@'%' identified by '"+add_password+"';";
                 system.executeUpdate(sql);
                 sql="grant all privileges on *.* to '"+add_username+"'@'%' with grant option";
