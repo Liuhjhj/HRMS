@@ -19,7 +19,7 @@
         edit.connect();
         try {   //复制-删除-更新-添加
             String copy;
-            String[] copyString = request.getParameterValues("checkbox_hire"); //利用CheckBox的value属性来进行删除
+            String[] copyString = request.getParameterValues("checkbox_hire");
             if (copyString != null) {   //从hire表复制数据到staff表
                 if (copyString.length > 0) {
                     for (int i = 0; i < copyString.length; i++) {

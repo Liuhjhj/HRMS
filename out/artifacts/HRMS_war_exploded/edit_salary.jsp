@@ -19,7 +19,7 @@
     edit.connect();
     try {
         String delete;
-        String[] deleteString = request.getParameterValues("checkbox"); //利用CheckBox的value属性来进行删除
+        String[] deleteString = request.getParameterValues("checkbox");
         if (deleteString != null) {
             if (deleteString.length > 0) {
                 delete = deleteString[0];

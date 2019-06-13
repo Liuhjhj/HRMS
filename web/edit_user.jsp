@@ -18,12 +18,13 @@
         user.setPassword((String)session.getAttribute("password"));
         user.connect();
         try {
-            String sql="update admin set password='"+new_password+"' where " +
-                    "username='"+user.getUsername()+"';";   //更新表
-            user.executeUpdate(sql);
-            sql="alter user '"+user.getUsername()+"'@'%' identified " +
+            String sql="alter user '"+user.getUsername()+"'@'%' identified " +
                     "with mysql_native_password BY '"+new_password+"';";
-            user.executeUpdate(sql);    //更改mysql用户密码
+            if(user.executeUpdate(sql)) {    //更改mysql用户密码
+                sql = "update admin set password='" + new_password + "' where " +
+                        "username='" + user.getUsername() + "';";   //更新表
+                user.executeUpdate(sql);
+            }
         }catch (Exception e){
             e.printStackTrace();
         }
